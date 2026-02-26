@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phrase elements in html</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.<abbr title="Control Unit">CU</abbr> Deleniti praesentium minus debitis quam voluptate repellat, est vel illo deserunt dolore.</p>
+    <code>Lorem ipsum dolor sit amet.</code>
+    <code>
+        <pre>
+            #include <iostream>
+                using namespace std;
+                
+                class Base1
+                {
+                public:
+                    virtual void func()
+                    {
+                        cout << "Base1::func()\n";
+                    }
+                };
+                
+                class Base2
+                {
+                public:
+                    virtual void func()
+                    {
+                        cout << "Base2::func()\n";
+                    }
+                };
+                
+                class Derived : public Base1, public Base2
+                {
+                public:
+                    void func() override
+                    {
+                        cout << "Derived::func()\n";
+                    }
+                };
+                
+                int main()
+                {
+                    Derived derived;
+                    Base1 *base1Ptr = &derived;
+                    Base2 *base2Ptr = &derived;
+                
+                    base1Ptr->func(); // Calls Derived::func()
+                    base2Ptr->func(); // Also calls Derived::func()
+                    return 0;
+                }
+        </pre>
+    </code>
+    <address>Gothatar - 09, Kathmandu</address>
+    <kbd>Ctrl</kbd> + <kbd>F2</kbd> is used to see print preview in Ms-Word.<br>
+    <q>Hello! What are you doing.</q>
+    <blockquote>
+        <q>Anara dana dataka lahar kholera hasana,<br> timile hase ma jitna sakxu indrako asana.</q><br>
+        <cite>-Mahakabi Laxmiprasad Devkota</cite>
+    </blockquote>
+
+    Lorem ipsum,<dfn>HI : Hi This is a website .</dfn> dolor sit amet consectetur adipisicing elit. Rem delectus ab aut accusantium hic dolores sapiente in quasi voluptates eligendi consequatur, incidunt accusamus amet? Illo dolor inventore consectetur possimus debitis.
+</body>
+</html>

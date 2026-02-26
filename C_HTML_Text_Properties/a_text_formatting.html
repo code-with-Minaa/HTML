@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text properties in HTMl</title>
+</head>
+<body>
+    This is normal text for testing purpose in html.
+    <p>This is sample text for paraghaph.</p><br/>
+    <small>This is small text.</small><br/>
+    <b>I am bold text</b><br/>
+    <strong>I am strong text.</strong><br/>
+    <i>I am italic.</i><br/>
+    <em>I am emphasized text.</em><br/>
+    <strike>I am striked</strike><br/>
+    <u>I am underlined.</u><br/>
+    <del>This is deleted text.</del><br/>
+    <p>Lorem ipsum dolor sit amet consectetur,<ins>This is inserted text.</ins> adipisicing elit. Voluptas commodi dignissimos cum quisquam tempora ad quos amet repellat doloremque soluta.</p><br/>
+    (a+b)<sup>2</sup>=a<sup>2</sup>+2ab+b<sup>2</sup><br/>
+    H<sub>2</sub>0
+    <p> hii! I  a m Mi  na.</p>
+    <pre>hii! I  a m Mi  na.</pre>
+    <pre>
+        #include <iostream>
+        using namespace std;
+        
+        class Base1
+        {
+        public:
+            virtual void func()
+            {
+                cout << "Base1::func()\n";
+            }
+        };
+        
+        class Base2
+        {
+        public:
+            virtual void func()
+            {
+                cout << "Base2::func()\n";
+            }
+        };
+        
+        class Derived : public Base1, public Base2
+        {
+        public:
+            void func() override
+            {
+                cout << "Derived::func()\n";
+            }
+        };
+        
+        int main()
+        {
+            Derived derived;
+            Base1 *base1Ptr = &derived;
+            Base2 *base2Ptr = &derived;
+        
+            base1Ptr->func(); // Calls Derived::func()
+            base2Ptr->func(); // Also calls Derived::func()
+            return 0;
+        }
+        </pre>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quas eaque veniam tempora, dicta rerum adipisci nam unde nulla placeat? Delectus odio neque voluptatum quaerat soluta necessitatibus id mollitia at molestiae nobis? Deleniti, provident aperiam eum obcaecati enim, nulla libero eaque quisquam corporis,<mark>This is hilighted text.</mark> cupiditate laborum non aliquid ea natus optio hic et distinctio temporibus molestiae necessitatibus ipsam culpa nisi officiis? Pariatur officia at, mollitia blanditiis eos suscipit perspiciatis eligendi iusto incidunt fuga soluta eveniet sapiente aperiam ratione nam praesentium consequatur maxime voluptate, adipisci id impedit corrupti animi veniam tempore. Quod illum harum culpa dolore. Mollitia soluta excepturi accusamus alias dolor.
+</body>
+</html> 
